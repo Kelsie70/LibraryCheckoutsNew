@@ -4,7 +4,9 @@
     stroke-width: 0.5;
     stroke-opacity: 0.6;
 }
-
+.checkoutInfo {
+  font-size: 20px;
+}
 select {
   /* General styling */
   height: 40px;
