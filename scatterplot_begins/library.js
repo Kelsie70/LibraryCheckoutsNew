@@ -528,7 +528,7 @@ function materialScale() {
 
     var materials = ["MIXED", "BOOK", "REGPRINT", "VIDEODISC", "MAGAZINE", "EBOOK", "SOUNDDISC", "SONG"];
 
-    var colorRange = ["#DD523F", "#9EDDE8", "#2E8797", "#89C474", "#E1CE6F", "#9E4254", "#F58E6F", "#D86178"];
+    var colorRange = ["#fc5a74", "#fee633", "#24d5e8", "#82e92d", "#fc5a74", "#0016FE", "#FE00EE", "#00FEF5"];
 
     var ordinal = d3.scaleOrdinal()
     .domain(materials)
