@@ -1,6 +1,6 @@
 var svgT = d3.select("#tooltip")
     .append("svg")
-    .attr("width", 200)
+    .attr("width", 300)
     .attr("height", 800);
 
     var tx = 60; //title x variable
