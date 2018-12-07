@@ -73,7 +73,7 @@ d3.csv('./library.csv', function(error, dataset) {
                         .attr("id","allButtons");
 
   //labels for buttons
-  var labels= ["Publication Year","Checkout Month","Usage Class", "Material Type", "Checkout Year"];
+  var labels= ["Publication Year","Checkout Month","Usage Class", "Material Type"];
 
   defaultColor= "#7777BB";
   hoverColor= "#0000ff";
@@ -457,7 +457,7 @@ function monthScale() {
 
     svgLegend.append("g")
     .attr("class", "legendMonth")
-    .attr("transform", "translate(100,45)")
+    .attr("transform", "translate(50,45)")
     .attr("fill", "white")
     .style("fill-opacity", "1");
 
@@ -482,7 +482,7 @@ function yearScale() {
 
     svgLegend.append("g")
     .attr("class", "legendYear")
-    .attr("transform", "translate(70,45)")
+    .attr("transform", "translate(5,45)")
     .attr("fill", "white")
     .style("fill-opacity", "1");
 
@@ -507,7 +507,7 @@ function usageScale() {
 
     svgLegend.append("g")
     .attr("class", "legendUsage")
-    .attr("transform", "translate(245,45)");
+    .attr("transform", "translate(185,45)");
 
     var legendLinear = d3.legendColor()
     .shapeWidth(30)
@@ -533,7 +533,7 @@ function materialScale() {
 
     svgLegend.append("g")
     .attr("class", "legendMaterial")
-    .attr("transform", "translate(60,45)");
+    .attr("transform", "translate(5,45)");
 
     var legendOrdinal = d3.legendColor()
     .shapeWidth(30)
