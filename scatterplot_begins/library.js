@@ -16,9 +16,12 @@ var chartG = svg.append('g')
 
 var chartWidth = svgWidth - padding.l - padding.r;
 var chartHeight = svgHeight - padding.t - padding.b;
-
-var materialColors = {MIXED: '#DD523F', BOOK: '#9EDDE8',
-   REGPRINT: '#2E8797', VIDEODISC: '#89C474', MAGAZINE: '#E1CE6F' , EBOOK:'#9E4254', SOUNDDISC:'#F58E6F', SONG:'#D86178'};
+/*
+var materialColors = {MIXED: '#DD523F', BOOK: '#fee633',
+   REGPRINT: '#2E8797', VIDEODISC: '#82e92d', MAGAZINE: '#E1CE6F' , EBOOK:'#9E4254', SOUNDDISC:'#F58E6F', SONG:'#D86178'};
+*/
+var materialColors = {MIXED: '#fc5a74', BOOK: '#fee633',
+   REGPRINT: '#24d5e8', VIDEODISC: '#82e92d', MAGAZINE: '#fc5a74' , EBOOK:'#0016FE', SOUNDDISC:'#FE00EE', SONG:'#00FEF5'};
 
 var yearColors = {2005: '#2E00E3', 2006: '#2E10E3',
     2007: '#2E29E3', 2008: '#2E3FE3', 2009: '#2E56E3', 2010: '#2E6AE3', 2011: '#2E7FE3',
@@ -315,7 +318,7 @@ function updateChart() {
               .attr('fill', function(d) {
                 return materialColors[d.materialtype];
               })
-              .attr('fill-opacity', '0.5')
+              .attr('fill-opacity', '0.7')
               .on("mouseover", handleMouseOver)
               .on("mouseout", handleMouseOut)
               .on("click", handleMouseClick);

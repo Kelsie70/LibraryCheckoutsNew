@@ -24,11 +24,12 @@ body {
     font-size: 13px;
 }
 
-
+/*
 div{
   border-style: solid;
   border-color: white;
 }
+*/
 
 .x-label{
   font-size: 24px;
@@ -68,10 +69,10 @@ div{
 
 #searchbar {
   position: absolute;
-  /* overflow-y:auto;
-  overflow-x:hidden; */
+  overflow-y:auto;
+  overflow-x:hidden;
   height:800px;
-  /* background-color: black; */
+  z-index: 1;
 }
 
 #myInput{
@@ -118,6 +119,7 @@ div{
   width: 300px;
   height: 765px;
   padding-top: 40px;
+  z-index: 0;
 }
 
 #creator{
