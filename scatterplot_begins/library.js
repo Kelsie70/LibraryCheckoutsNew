@@ -315,7 +315,7 @@ function updateChart() {
               .attr('fill', function(d) {
                 return materialColors[d.materialtype];
               })
-              .attr('fill-opacity', '0.5')
+              .attr('fill-opacity', '0.7')
               .on("mouseover", handleMouseOver)
               .on("mouseout", handleMouseOut)
               .on("click", handleMouseClick);
