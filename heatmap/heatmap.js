@@ -27,6 +27,7 @@ var margin = {top:50, right:0, bottom:100, left:100},
 				.attr("y", function (d, i){ return i*gridSize;})
 				.style("text-anchor", "end")
 				.attr("transform", "translate(-6," + gridSize/1.5+")")
+				.style("font-size", "18px")
                 .style("fill", "white")
 				.attr("class", function(d, i) { return ((i>=0 && i<=4) ? "dayLabel mono axis axis-workweek": "dayLabel mono axis"); });
 
@@ -45,7 +46,7 @@ var margin = {top:50, right:0, bottom:100, left:100},
     	.attr('class', 'chartTitle')
         .attr('transform', 'translate(0, -30)')
         .style("fill", "white")
-        .style("font-size", "16px")
+        .style("font-size", "24px")
     	.text('Frequency of Checkouts per Month/Year for <select item above>');
 
 

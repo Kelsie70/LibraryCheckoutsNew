@@ -349,24 +349,24 @@ function updateButtonColors(button, parent) {
   }
 
 function handleMouseClick(d, i) {
-  
-   updateHeatmap(d.title); 
+
+   updateHeatmap(d.title);
    var type;
    var name;
 
-   if(d.materialtype == "BOOK" || d.materialType == "EBOOK" || d.materialType == "SONG") 
+   if(d.materialtype == "BOOK" || d.materialType == "EBOOK" || d.materialType == "SONG")
    {
        type = "creator";
        name = d.creator;
-   } 
-   else 
+   }
+   else
    {
        type = "publisher";
        name = d.publisher;
    }
 
-   updateCreatorChart(type, name); 
-    if (i != prevI) 
+   updateCreatorChart(type, name);
+    if (i != prevI)
     {
        tempD = prevD;
        tempI = prevI;
@@ -374,14 +374,14 @@ function handleMouseClick(d, i) {
        prevI = i;
        return handleClickOut(tempD, tempI, prevD, prevI);
     }
-    else 
+    else
     {
-      if (secondClick == false) 
+      if (secondClick == false)
       {
         secondClick = true;
         return handleClickOut(d, i);
-      } 
-      else 
+      }
+      else
       {
         secondClick = false;
         return handleClickOut(d, i, d, i);
@@ -390,7 +390,7 @@ function handleMouseClick(d, i) {
 }
 
 function updateColorScale(dataset, i) {
-  
+
   var colorScale;
   var normalizedValue;
   var min;
