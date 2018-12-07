@@ -124,7 +124,12 @@ function autocomplete(inp) {
       x[i].parentNode.removeChild(x[i]);
     }
     input1 = inp.value;
-    highlightSelection(inp.value);
+    if(inp.value == '') {
+    updateColorScale(library, 3);
+    emptyStringCount = 1;
+    } else {
+      highlightSelection(inp.value);
+    }
     console.log("This is hopefully the title I clicked on", inp.value);
   }
 
