@@ -20,8 +20,8 @@ var barHeight = barBand * 0.7;
 var chartGC = svgC.append('g')
 .attr('transform', 'translate('+[paddingC.l, paddingC.t]+')');
 
-var materialColors = {MIXED: '#fc5a74', BOOK: '#fee633',
-   REGPRINT: '#24d5e8', VIDEODISC: '#82e92d', MAGAZINE: '#fc5a74' , EBOOK:'#0016FE', SOUNDDISC:'#FE00EE', SONG:'#00FEF5'};
+var materialColors = {MIXED: '#DD523F', BOOK: '#9EDDE8',
+   REGPRINT: '#2E8797', VIDEODISC: '#89C474', MAGAZINE: '#E1CE6F' , EBOOK:'#9E4254', SOUNDDISC:'#F58E6F', SONG:'#D86178'};
 
 var yearColors = {2005: '#2E00E3', 2006: '#2E10E3',
     2007: '#2E29E3', 2008: '#2E3FE3', 2009: '#2E56E3', 2010: '#2E6AE3', 2011: '#2E7FE3',
@@ -637,8 +637,8 @@ function materialScale2() {
 
     var materials = ["MIXED", "BOOK", "REGPRINT", "VIDEODISC", "MAGAZINE", "EBOOK", "SOUNDDISC", "SONG"];
 
-    var colorRange = ["#fc5a74", "#fee633", "#24d5e8", "#82e92d", "#fc5a74", "#0016FE", "#FE00EE", "#00FEF5"];
-
+    var colorRange = ["#DD523F", "#9EDDE8", "#2E8797", "#89C474", "#E1CE6F", "#9E4254", "#F58E6F", "#D86178"];
+    
     var ordinal = d3.scaleOrdinal()
     .domain(materials)
     .range(colorRange);
