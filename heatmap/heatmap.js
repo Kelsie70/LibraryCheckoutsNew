@@ -1,4 +1,4 @@
-var margin = {top:50, right:0, bottom:100, left:100},
+var margin = {top:90, right:0, bottom:100, left:100},
 		width=960-margin.left-margin.right,
 		height=630-margin.top-margin.bottom,
 		gridSize=Math.floor(width/24), //35
@@ -41,14 +41,21 @@ var margin = {top:50, right:0, bottom:100, left:100},
                 .style("fill", "white")
 				.attr("transform", "translate(" + gridSize/2+", -6)")
 				.attr("class", function(d, i) { return ((i>=9 && i<= 17) ? "timeLabel mono axis axis-worktime": "timeLabel mono axis"); });
+	
+    svgHM.append('text')
+    	.attr('class', 'chartTitle2')
+        .attr('transform', 'translate(0, -60)')
+        .style("fill", "white")
+        .style("font-size", "24px")
+    	.text('Frequency of Checkouts per Month/Year:');
+
 
     svgHM.append('text')
     	.attr('class', 'chartTitle')
         .attr('transform', 'translate(0, -30)')
         .style("fill", "white")
         .style("font-size", "24px")
-    	.text('Frequency of Checkouts per Month/Year for <select item above>');
-
+    	.text('<select item above>');
 
 function updateHeatmap(newTitle){
 
@@ -102,7 +109,7 @@ function updateHeatmap(newTitle){
 		heatMap.selectAll("title").text(function(d) {return d.checkouts;});
 
         svgHM.select(".chartTitle")
-            .text('Frequency of Checkouts per Month/Year for ' + newTitle.substring(0, newTitle.indexOf("/")));
+            .text( newTitle.substring(0, newTitle.indexOf("/")));
 
         /*
        svgHM.append('text')

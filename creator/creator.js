@@ -2,7 +2,7 @@
 var svgWidthC = 1000;
 var svgHeightC = 650;
 
-var paddingC = {t: 0, r: 40, b: 30, l: 100};
+var paddingC = {t: 60, r: 40, b: 30, l: 100};
 
 // Compute chart dimensions
 var chartWidthC = svgWidthC - paddingC.l - paddingC.r;
@@ -31,7 +31,7 @@ var yearColors = {2005: '#2E00E3', 2006: '#2E10E3',
 svgC.append('text')
   .attr('class', 'chartTitle')
   .attr('id', 'chartTitle')
-  .attr('transform', 'translate(100, 20)')
+  .attr('transform', 'translate(100, 40)')
   .style("fill", "white")
   .style("font-size", "24px")
   .text('Top 10 Checkout Items for ');
@@ -45,13 +45,13 @@ var xAxis = d3.axisBottom(xScale)
 svgC.append('g')
   .attr('id', 'x-axis')
   .attr('class', 'x-axis')
-  .attr('transform', 'translate(100,450)')
+  .attr('transform', 'translate(100,470)')
   .attr('stroke', 'white')
   .call(xAxis);
 
 svgC.append('text')
     	.attr('class', 'x-label')
-    	.attr('transform', 'translate(325, 500)')
+    	.attr('transform', 'translate(325, 520)')
         .style("fill", "white")
     	.text('Total Checkouts');
 

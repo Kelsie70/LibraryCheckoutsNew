@@ -171,18 +171,19 @@ d3.csv('./library.csv', function(error, dataset) {
 
 function highlightSelection(search) {
   chartG.selectAll('circle')
+  	.style('z-index',1)
     .attr('fill', function(d) {
-      if (search === d.title || search === d.publisher || search === d.creator) {
+      if (search == d.title || search == d.publisher || search == d.creator ) {
         return "#dada4a";
       } else {
         return "gray";
       }
     })
-    .attr('opacity', function(d) {
+    .attr('fill-opacity', function(d) {
       if (search === d.title || search === d.publisher || search === d.creator) {
         return "1";
       } else {
-        return ".7";
+        return "0.7";
       }
     })
     .attr('r', function(d) {
@@ -280,7 +281,7 @@ function updateChart() {
             .force("collide", d3.forceCollide(5))
             .stop();
 
-          for (var i = 0; i < 50; ++i)
+          for (var i = 0; i < 30; ++i)
             {
                 simulation.tick();
             }
@@ -314,7 +315,7 @@ function updateChart() {
             });
 
             titlesEnter.append('circle')
-              .attr('r', 6)
+              .attr('r', 4)
               .attr('fill', function(d) {
                 return materialColors[d.materialtype];
               })
